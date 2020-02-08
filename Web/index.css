@@ -7,19 +7,5 @@
 }
 
 #portfolioSide button.active{
-    background-color: gold;
-    border-color: white;
-}
-
-#blackrockSide {
-    color: white;
-}
-
-#blackrockSide button{
-    border-color:black;
-}
-
-#blackrockSide button.active{
-    background-color: gold;
-    border-color: black;
+    background-color: darkgoldenrod;
 }
