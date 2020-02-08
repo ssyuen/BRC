@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/Checkbox-Button.css">
     <link rel="stylesheet" href="assets/css/checkbox.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body class="text-left" id="page-top">
@@ -41,26 +42,37 @@
     </div>
     <div
         style="background: url('assets/img/bg-pattern.png'), linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);;height: 100%;margin-bottom: 1px;">
+
         <div class="row" style="padding-top: 85px;padding-right: 45px;padding-left: 45px;">
             <div class="col">
                 <div>
-                    <h2 class="text-center" style="color: rgb(255,255,255);font-family: 'Archivo Black', sans-serif;">
-                        <strong>Build Your Portfolio</strong></h2>
-                    <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
-                        <label class="btn btn-secondary active w-100">
-                            <input type="checkbox" checked autocomplete="off"> Netflix
-                        </label>
+                    <h2 class="text-center" style="color: rgb(0, 0, 0);font-family: 'Archivo Black', sans-serif;">
+                        <strong>Build Your Portfolio</strong>
+                    </h2>
+                    <div class="text-center">
+                        <div><b>Choose some stocks</b></div>
                     </div>
+
+                    
+                    <div class="row">
+                        <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
+                            <label class="btn btn-secondary active w-50">
+                                <input type="checkbox" checked autocomplete="off"> Netflix
+                            </label>
+                        </div>
+                     </div>
                     <div class="btn-group-toggle p-3 w-100" data-toggle="buttons">
-                        <label class="btn btn-secondary active w-100">
+                        <label class="btn btn-secondary active w-50">
                             <input type="checkbox" checked autocomplete="off"> Apple
                         </label>
                     </div>
                     <div class="btn-group-toggle p-3 w-100" data-toggle="buttons">
-                        <label class="btn btn-secondary active w-100">
+                        <label class="btn btn-secondary active w-50">
                             <input type="checkbox" checked autocomplete="off"> Microsoft
                         </label>
                     </div>
+
+
                 </div>
             </div>
             <div class="col-auto d-xl-flex justify-content-xl-center">
@@ -74,8 +86,9 @@
             <!-- This is all the second column of the first row-->
             <div class="col">
                 <div>
-                    <div class="text-center" style="background-color: rgba(255,255,255,0);filter: brightness(46%);"><img
-                            src="assets/img/BlackRock.png" width="200" style="padding-bottom: 10px;"></div>
+                    <div class="text-center" style="background-color: rgba(255,255,255,0);filter: brightness(46%);">
+                        <img src="assets/img/BlackRock.png" id="blackrockimage" width="200" style="padding-bottom: 10px;">
+                    </div>
 
                     <header class="text-center">
                         <div class="row">
