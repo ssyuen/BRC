@@ -241,6 +241,10 @@
 
             var weight = (100 / all.length).toFixed(4);
 
+            if(all.length == 0){
+                setText('0', '0');
+                return;
+            }
 
             let tickNames = "";
             for (let i = 0; i < all.length; i++) {
@@ -258,13 +262,14 @@
                 let risk = Math.round(data['risk'].toFixed(2));
                 // alert(arr);
                 // alert(result.length);
-                
-                document.getElementById('annualReturn').innerText = arr + '%';
-                document.getElementById('risk').innerText = risk + '%';
-
-
+                setText(arr, risk);
             });
 
+        }
+
+        function setText(arrAsStr, riskAsStr){
+            document.getElementById('annualReturn').innerText = arrAsStr + '%';
+            document.getElementById('risk').innerText = riskAsStr + '%';
         }
 
         function switchClass(current){
