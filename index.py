@@ -25,5 +25,7 @@ def user_api():
 
 @app.route('/blk-api/',methods=['GET'])
 def blk_api():
-  args = request.args
-  return call(args)
+  args = request.args['ticks']
+  
+  print(args, 'LOOK HERE')
+  return jsonify(call(str(args)))
