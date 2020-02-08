@@ -19,4 +19,5 @@ latest_perf = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['re
 f = open('latest_perf.json','a')
 f.write(latest_perf)
 
-
+tbl = pd.read_json(latest_perf,typ='series')
+print(tbl.head())
