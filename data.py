@@ -51,16 +51,17 @@ def call(args):
     
 
         
-    for date in annualized_returns.keys():
+    # for date in annualized_returns.keys():
         
-        print('Date: ', date, '\nAnnualized Return Since Start: ', annualized_returns[date])
-        print('\n')
+        # print('Date: ', date, '\nAnnualized Return Since Start: ', annualized_returns[date])
+        # print('\n')
 
-        print('Total Risk of Portfolio: ', total_risk_val)
+        # print('Total Risk of Portfolio: ', total_risk_val)
     #print(totalRisk)
     
     #print(type(data))
     pair = {'arr':annualized_returns[sorted(annualized_returns.keys())[-1]],'risk':total_risk_val}
+    print(pair)
     return json.dumps(pair)
 
 
