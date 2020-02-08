@@ -13,7 +13,10 @@ f.write(json.dumps(data))
 print(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf'])
 
 
+latest_perf = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf']) 
+
+
 f = open('latest_perf.json','a')
-f.write(json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf']))
+f.write(latest_perf)
 
 
