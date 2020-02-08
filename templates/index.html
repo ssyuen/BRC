@@ -41,16 +41,7 @@
         </nav>
     </div>
     <script>
-        function switchClass(current){
-            if (current.classList.contains("active")){
-                console.log("not active");
-                current.classList.removeClass("active");
-            }
-            else{
-                console.log("active");
-                current.classList.addClass("active");
-            }
-        }
+
     </script>
     <div
         style="background: url('../static/assets/img/bg-pattern.png'), linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);;height: 100%;margin-bottom: 1px;">
@@ -71,7 +62,7 @@
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="NFLX">Netflix</button>
+                                    aria-pressed="false" onclick="switchClass('NFLX');" itemprop="NFLX" id="NFLX">Netflix</button>
                             </div>
                             <!-- <div class="btn-group-toggle p-3 w-auto " data-toggle="buttons">
                                 <label class="btn btn-primary w-100">
@@ -82,7 +73,7 @@
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="AAPL">Apple</button>
+                                    aria-pressed="false" onclick="switchClass('AAPL');" itemprop="AAPL" id="AAPL">Apple</button>
                             </div>
                         </div>
                     </div>
@@ -90,27 +81,13 @@
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="MSFT">Microsoft</button>
+                                    aria-pressed="false" onclick="switchClass('MSFT');" itemprop="MSFT" id="MSFT">Microsoft</button>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="GE">GE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="DAL">Delta</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="PINS">Pintrest</button>
+                                    aria-pressed="false" onclick="switchClass('GE');" itemprop="GE" id="GE">GE</button>
                             </div>
                         </div>
                     </div>
@@ -118,13 +95,13 @@
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="GPS">GAP</button>
+                                    aria-pressed="false" onclick="switchClass('DAL');" itemprop="DAL" id="DAL">Delta</button>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="SBUX">Starbucks</button>
+                                    aria-pressed="false" onclick="switchClass('PINS');" itemprop="PINS" id="PINS">Pintrest</button>
                             </div>
                         </div>
                     </div>
@@ -132,13 +109,27 @@
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="XOM">Exxon</button>
+                                    aria-pressed="false" onclick="switchClass('GPS');" itemprop="GPS" id="GPS">GAP</button>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
                                 <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass(this); calculate()" itemprop="PG">Proctor & Gamble</button>
+                                    aria-pressed="false" onclick="switchClass('SBUX');" itemprop="SBUX" id="SBUX">Starbucks</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" onclick="switchClass('XOM');" itemprop="XOM" id="XOM">Exxon</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" onclick="switchClass('PG');" itemprop="PG" id="PG">Proctor & Gamble</button>
                             </div>
                         </div>
                     </div>
@@ -245,7 +236,7 @@
 
     <script>
         function calculate() {
-            var all = document.getElementsByClassName('companyNames active');
+            var all = document.getElementsByClassName('companyNames flag');
             console.log(all);
 
             var weight = (100 / all.length).toFixed(4);
@@ -274,6 +265,23 @@
 
             });
 
+        }
+
+        function switchClass(current){
+            console.log(current);
+            let x = document.getElementById(current);
+            if (x.classList.contains("flag")){
+                console.log(x);
+                console.log("not active");
+                x.classList.remove('flag');
+            }
+            else{
+                console.log(x);
+                console.log("active");
+                x.classList.add('flag');
+                
+            }
+            calculate();
         }
     </script>
 </body>

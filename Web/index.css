@@ -1,0 +1,11 @@
+#blackrockimage{
+    filter: invert(100%);
+}
+
+#portfolioSide{
+    color: black;
+}
+
+#portfolioSide button.flag{
+    background-color: darkgoldenrod;
+}
