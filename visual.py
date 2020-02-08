@@ -2,22 +2,23 @@ import requests
 import json
 import pandas as pd
 
-portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/portfolio-analysis", params={'positions' : 'BLK~25|AAPL~25|IXN~25|MALOX~25'})
+portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/portfolio-analysis", params={'positions' : 'BLK~100|','calculatePerformance':True,})
 
 data = portfolioAnalysisRequest.json()
 
 
-f = open('out.json','w')
-f.write(json.dumps(data))
-
-print(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf'])
+#print(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf'])
 
 
-latest_perf = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf']) 
+returnsMap = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['returnsMap']) 
 
+# print(returnsMap)
 
-f = open('latest_perf.json','w')
-f.write(latest_perf)
+f = open('returnsMap.json','w')
+f.write(returnsMap)
 
-tbl = pd.read_json(latest_perf,typ='series')
-print(tbl.head())
+#tbl = pd.read_json(returnsMap,typ='series')
+tbl = pd.read_json(returnsMap)
+print(tbl)
+
+#tbl
