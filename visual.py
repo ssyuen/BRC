@@ -27,24 +27,29 @@ f.write(returnsMap)
 
 
 total_risk_val = eval(totalRisk)['totalRisk']
-annualized_returns = []
+annualized_returns = {}
 
 #tbl = pd.read_json(returnsMap,typ='series')
 tbl = pd.read_json(returnsMap)
 
 for col in tbl.columns:
 
-    # print('-'*15)
-    # print(tbl[col])
-    # print('-'*15)
+    print('-'*15)
+    print(tbl[col])
+    print('-'*15)
 
 
-    annualized_returns.append(tbl[col]['sinceStartDateAnnualized'])
+    annualized_returns[col]= tbl[col]['sinceStartDateAnnualized']
 
     
-    # print('\n'*5)
+    print('\n'*2)
 
-print(annualized_returns)
+
+
+
+for date in annualized_returns.keys():
+    print('Date: ', date, '\nAnnualized Return Since Start: ', annualized_returns[date])
+    print('\n')
 
 #tbl
 print('Total Risk of Portfolio: ', total_risk_val)
