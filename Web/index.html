@@ -40,7 +40,7 @@
         </nav>
     </div>
     <script>
-        $("#portfolioSide button").click(function(){
+        $("#portfolioSide button").click(function () {
             $("button").removeClass("active");
             $(this).addClass("active");
         });
@@ -51,7 +51,7 @@
 
         <div class="row" style="padding-top: 85px;padding-right: 45px;padding-left: 45px;">
             <div class="col" id="portfolioSide">
-                <div>
+                <div id="companyNamesGroup">
                     <h2 class="text-center" style="color: rgb(0, 0, 0);font-family: 'Archivo Black', sans-serif;">
                         <strong>Build Your Portfolio</strong>
                     </h2>
@@ -62,8 +62,8 @@
                     <div class="row">
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Netflix</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" onclick="calculate()" itemprop="NFLX|">Netflix</button>
                             </div>
                             <!-- <div class="btn-group-toggle p-3 w-auto " data-toggle="buttons">
                                 <label class="btn btn-primary w-100">
@@ -73,64 +73,64 @@
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Apple</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="AAPL|">Apple</button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Microsoft</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="NFLX">Microsoft</button>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">GE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Delta</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Pintrest</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="GE|">GE</button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Zara</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="DAL|">Delta</button>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Starbucks</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="PINS|">Pintrest</button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Exxon</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="GPS|">GAP</button>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
-                                    aria-pressed="false">Proctor & Gamble</button>
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="SBUX|">Starbucks</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="XOM|">Exxon</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="PG|">Proctor & Gamble</button>
                             </div>
                         </div>
                     </div>
@@ -223,6 +223,21 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/new-age.js"></script>
+
+    <script>
+        function calculate() {
+            var all = document.getElementsByClassName('companyNames');
+            console.log(all);
+
+            let tickNames = "";
+            for(let i = 0; i < all.length; i++){
+                tickNames += all[i].getAttribute("itemprop");
+            }
+
+            console.log(tickNames);
+            
+        }
+    </script>
 </body>
 
 </html>
