@@ -2,7 +2,7 @@ import requests
 import json
 import pandas as pd
 
-portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/portfolio-analysis", params={'positions' : 'BLK~100|','calculatePerformance':True,})
+portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/portfolio-analysis", params={'positions' : 'SURFX~3.67|IPDN~17|PNGYX~15.17|TCBK~17.17|DMPI~5.21|VPOIX~1.81|MTN~15.51|FCOR~10.62|MWCIX~8.64|9637~5.2|','calculatePerformance':True,'calculateRisk':True})
 
 data = portfolioAnalysisRequest.json()
 
@@ -11,14 +11,35 @@ data = portfolioAnalysisRequest.json()
 
 
 returnsMap = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['returnsMap']) 
+portfolio = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0])
+totalRisk = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['riskData'])
 
-# print(returnsMap)
+f = open('portfolio.json','w')
+f.write(portfolio)
+
+
+f = open('totalRisk.json','w')
+f.write(totalRisk)
 
 f = open('returnsMap.json','w')
 f.write(returnsMap)
 
+
+
+total_risk_val = eval(totalRisk)['totalRisk']
+
+
 #tbl = pd.read_json(returnsMap,typ='series')
 tbl = pd.read_json(returnsMap)
-print(tbl)
+
+for col in tbl.columns:
+
+    print('-'*15)
+    print(tbl[col])
+    print('-'*15)
+    print('\n'*5)
+    
 
 #tbl
+print('Total Risk of Portfolio: ', total_risk_val)
+#print(totalRisk)
