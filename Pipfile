@@ -10,6 +10,8 @@ requests = "*"
 pandas = "*"
 jupyter = "*"
 uwsgi = "*"
+flask = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.7"
