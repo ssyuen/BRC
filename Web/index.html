@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker+Grotesque">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -55,8 +56,10 @@
                     <h2 class="text-center" style="color: rgb(0, 0, 0);font-family: 'Archivo Black', sans-serif;">
                         <strong>Build Your Portfolio</strong>
                     </h2>
-                    <div class="text-center">
-                        <div><b>Choose some stocks</b></div>
+                    <div class="text-center pb-2">
+                        <div>
+                            <b>Choose some common stocks</b>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -134,8 +137,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card text-white bg-dark mb-3 mt-3" style="width: auto;">
+                        <div class="card-body">
+                          <div class="row">
+                              <div class="col text-center">
+                                    <p style="font-family: 'Anton', sans-serif; font-size: 75px;">
+                                        0%
+                                    </p> 
+                                    <p class="lead">Annualized Return</p>
+                              </div>
+                              <div class="col text-center">
+                                <p style="font-family: 'Anton', sans-serif; font-size: 75px;">
+                                    0%
+                                </p>
+                                <p class="lead">Risk</p>
+                              </div>
+                          </div>  
+                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        </div>
+                      </div>
                 </div>
-                <p id="result">Result: </p>
             </div>
             <div class="col-auto d-xl-flex justify-content-xl-center">
                 <div
@@ -198,6 +219,11 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="row">
+            <div class="col">
+
+            </div>
+        </div> -->
     </div>
     <section id="features" class="features text-center bg-primary" style="background-color: rgb(20,50,82);">
         <div class="container">
@@ -235,7 +261,7 @@
             }
 
             console.log(tickNames);
-            
+
         }
     </script>
 </body>
