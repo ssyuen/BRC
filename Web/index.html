@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker+Grotesque">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  -->
 </head>
 
 <body class="text-left" id="page-top">
@@ -36,6 +39,13 @@
             </div>
         </nav>
     </div>
+    <script>
+        $("#portfolioSide button").click(function(){
+            $("button").removeClass("active");
+            $(this).addClass("active");
+        });
+
+    </script>
     <div
         style="background: url('assets/img/bg-pattern.png'), linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);;height: 100%;margin-bottom: 1px;">
 
@@ -51,59 +61,88 @@
 
                     <div class="row">
                         <div class="col">
-                            <div class="btn-group-toggle p-3 w-auto " data-toggle="buttons">
-                                <label class="btn btn-primary active w-100">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Netflix</button>
+                            </div>
+                            <!-- <div class="btn-group-toggle p-3 w-auto " data-toggle="buttons">
+                                <label class="btn btn-primary w-100">
                                     <input type="checkbox" checked autocomplete="off">Netflix
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col">
-                            <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
-                                <label class="btn btn-primary active w-100">
-                                    <input type="checkbox" checked autocomplete="off">Apple
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
-                                <label class="btn btn-primary active w-100">
-                                    <input type="checkbox" checked autocomplete="off">Microsoft
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
-                                <label class="btn btn-primary active w-100">
-                                    <input type="checkbox" checked autocomplete="off">GE
-                                </label>
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Apple</button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
-                                <label class="btn btn-primary active w-100">
-                                    <input type="checkbox" checked autocomplete="off">Delta
-                                </label>
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Microsoft</button>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="btn-group-toggle p-3 w-auto" data-toggle="buttons">
-                                <label class="btn btn-primary active w-100">
-                                    <input type="checkbox" checked autocomplete="off">Pintrest
-                                </label>
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">GE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Delta</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Pintrest</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Zara</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Starbucks</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Exxon</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100" data-toggle="button"
+                                    aria-pressed="false">Proctor & Gamble</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <p id="result">Result: </p>
             </div>
             <div class="col-auto d-xl-flex justify-content-xl-center">
                 <div
                     class="d-xl-flex justify-content-center align-items-center align-content-center justify-content-xl-center">
                     <p class="text-center d-xl-flex justify-content-center align-content-center justify-content-xl-center"
-                        style="font-family: 'Archivo Black', sans-serif;color: rgb(255,255,255);"><span class="pr-1" style="color: #000000">V</span style="color: #FFFFFF">S</p>
+                        style="font-family: 'Archivo Black', sans-serif;color: rgb(255,255,255);"><span class="pr-1"
+                            style="color: #000000">V</span style="color: #FFFFFF">S</p>
                 </div>
             </div>
 
@@ -111,7 +150,8 @@
             <div class="col" id="blackrockSide">
                 <div>
                     <div class="text-center" style="background-color: rgba(255,255,255,0);filter: brightness(46%);">
-                        <img src="assets/img/BlackRock.png" id="blackrockimage" width="200" style="padding-bottom: 10px;">
+                        <img src="assets/img/BlackRock.png" id="blackrockimage" width="200"
+                            style="padding-bottom: 10px;">
                     </div>
 
                     <header class="text-center">
@@ -127,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </header>
                     <div class="row">
                         <div class="col">
