@@ -6,6 +6,8 @@
 
 - To look at the data run `python visual.py`
 
+- To start the server run `python -m http.server`
+
 ## Installation
 
 1. Clone this repository to your local via git clone <hhttps://github.com/ssyuen/BRC.git>
