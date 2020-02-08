@@ -7,7 +7,7 @@ portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackath
 data = portfolioAnalysisRequest.json()
 
 
-f = open('out.json','a')
+f = open('out.json','w')
 f.write(json.dumps(data))
 
 print(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf'])
@@ -16,7 +16,7 @@ print(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf
 latest_perf = json.dumps(data['resultMap']['PORTFOLIOS'][0]['portfolios'][0]['returns']['latestPerf']) 
 
 
-f = open('latest_perf.json','a')
+f = open('latest_perf.json','w')
 f.write(latest_perf)
 
 tbl = pd.read_json(latest_perf,typ='series')
