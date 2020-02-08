@@ -6,7 +6,7 @@
 
 - To look at the data run `python visual.py`
 
-- To start the server run `python -m http.server`
+- To start the server run `./bootstrap.sh`
 
 ## Installation
 
