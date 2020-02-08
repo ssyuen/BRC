@@ -248,7 +248,9 @@
 
             let tickNames = "";
             for (let i = 0; i < all.length; i++) {
-                tickNames += all[i].getAttribute("itemprop") + "~" + weight + "|";
+                if(all[i].classList.contains("active")){
+                    tickNames += all[i].getAttribute("itemprop") + "~" + weight + "|";
+                }
             }
 
             console.log(tickNames);
