@@ -154,44 +154,32 @@
                             style="padding-bottom: 10px;">
                     </div>
 
-                    <header class="text-center">
-                        <div class="row">
-                            <div class="col justify-content-end">
-                                <div>
-                                    Choose an Exchange-traded Fund (ETF)
-                                </div>
-                            </div>
-                            <div class="col justify-content-end">
-                                <div>
-                                    <a href="">What's an ETF?</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <div><b>Choose an Exchange-traded Fund (ETF)</b></div>
+                    </div>
+                    <div class="text-center">
+                        <div><a href="">What's an ETF?</a></div>
+                    </div>
 
-                    </header>
                     <div class="row">
                         <div class="col">
-                            <div class="btn-group-toggle p-3 d-inline" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
-                                    <input type="checkbox" checked autocomplete="off"> iShares S&P 500 Index Fund <span
-                                        class="badge">WFSPX</span>
-                                </label>
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" onclick="calculate()" itemprop="NFLX|">iShares S&P 500 Index Fund</button>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="btn-group-toggle p-3 d-inline" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
-                                    <input type="checkbox" checked autocomplete="off"> iShares Russell 200 Small-Cap
-                                    Index Fund <span class="badge">BDBXX</span>
-                                </label>
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="AAPL|">iShares Russell 200 Fund</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="row text-center">
                         <div class="col">
-                            <div class="btn-group-toggle p-3 d-inline" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
-                                    <input type="checkbox" checked autocomplete="off"> iShares Municipal Bond Index Fund
-                                    <span class="badge">BIDKXX</span>
-                                </label>
+                            <div class="p-3 w-auto">
+                                <button type="button" class="btn btn-primary w-10 companyNames" data-toggle="button"
+                                    aria-pressed="false" itemprop="AAPL|">iShares Municipal Bond Index Fund</button>
                             </div>
                         </div>
                     </div>
@@ -230,12 +218,12 @@
             console.log(all);
 
             let tickNames = "";
-            for(let i = 0; i < all.length; i++){
+            for (let i = 0; i < all.length; i++) {
                 tickNames += all[i].getAttribute("itemprop");
             }
 
             console.log(tickNames);
-            
+
         }
     </script>
 </body>
