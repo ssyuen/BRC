@@ -377,7 +377,7 @@
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
                 setText('annualReturn', 'risk', arr, risk);
-                setInterst('annualReturn', arr);
+                setInterst('portfolioInterestWith', arr);
             });
         }
 
@@ -404,13 +404,14 @@
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
                 setText('annualReturnBR', 'riskBR', arr, risk);
-                setInterst('blackrockInterestWith', arr)
+                setInterst('blackrockInterestWith', arr);
             });     
         }
 
         function setInterst(id, arr){
-            let finalAmt = 100 * Math.pow((1 + (arr / 10)), 10);
-            document.getElementById(id).innerText = 'Savings with investing: $100 after 10 years: <b>' + finalAmt + '</b>'; 
+            let finalAmt = (100 * Math.pow((1 + (arr / 10)), 10)).toFixed(2);
+            let finalAmtStr = (finalAmt + '').bold()
+            document.getElementById(id).innerText = 'Savings with investing: $100 after 10 years: $' + finalAmtStr; 
         }
 
         function setText(idAnnual, idRisk, arrAsStr, riskAsStr) {
