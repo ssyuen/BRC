@@ -2,6 +2,23 @@
 
 > Make sure that pipenv is installed on your system (look here <https://docs.python-guide.org/dev/virtualenvs/#virtualenvironments-ref):>
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
+[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
+
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+
+## Introduction
+
+
+
+
+
+
+
 ## Execution
 
 - To look at the data run `python visual.py`
