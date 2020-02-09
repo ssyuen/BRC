@@ -409,7 +409,7 @@
         }
 
         function setInterst(id, arr){
-            let finalAmt = (100 * Math.pow((1 + (arr)), 10)).toFixed(2);
+            let finalAmt = (100 * Math.pow((1 + (arr/100)), 10)).toFixed(2);
             document.getElementById(id).innerText = '$' + finalAmt; 
         }
 
