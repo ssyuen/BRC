@@ -15,15 +15,12 @@
     <img src="https://forthebadge.com/images/badges/validated-html5.svg">
   </a>
 
-</p>
-
-# BRC
-
 Jasmine is made to help you get into investing while making sure you avoid the noise. Don't be baited by the news about "popular" stocks/companies or potentially huge gains from betting on a company. Instead, Jasmine has two API endpoints which access BlackRock's Aladdin, which in turn, returns financial information that Jasmine uses to show users the advantages of diversification.
+
+</p>
 
 > Make sure that pipenv is installed on your system (look here <https://docs.python-guide.org/dev/virtualenvs/#virtualenvironments-ref):>
 
-## Introduction
 
 ## Execution
 
