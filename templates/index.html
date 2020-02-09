@@ -347,8 +347,19 @@
             }
 
             console.log(tickNames);
+<<<<<<< HEAD
+
+            $.getJSON("/user-api/?ticks=" + tickNames, function processData(result) {
+                console.log("entered JSON");
+                let data = JSON.parse(result)
+                let arr = Math.round(data['arr'] * 100);
+                let risk = Math.round(data['risk'].toFixed(2));
+                setText('annualReturn', 'risk', arr, risk);
+            });
+=======
             let dr = getJsonFromApi('/user-api/', tickNames)
             setText('annualReturn', 'risk', dr[0], dr[1]);
+>>>>>>> 1626efc2bb8dcc7a672ebf9fc1745b51cfb6c288
         }
 
         function calculateBr(){
@@ -366,19 +377,23 @@
             for (let i = 0; i < all.length; i++) {
                 tickNames += all[i].getAttribute("id") + "~" + weight + "|";
             }
-
             console.log(tickNames);
+<<<<<<< HEAD
+
+            $.getJSON("/blk-api/?ticks=" + tickNames, function processData(result) {
+=======
             let dr = getJsonFromApi('/blk-api/', tickNames)
             setText('annualReturnBR', 'riskBR', dr[0], dr[1]);
         }
 
         function getJsonFromApi(apiUrl, tickNames){
             $.getJSON(apiUrl + "?ticks=" + tickNames, function processData(result) {
+>>>>>>> 1626efc2bb8dcc7a672ebf9fc1745b51cfb6c288
                 console.log("entered JSON");
                 let data = JSON.parse(result)
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
-                return [arr, risk];
+                setText('annualReturnBR', 'riskBR', arr, risk);
             });
         }
 
