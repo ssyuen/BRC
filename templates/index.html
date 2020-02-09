@@ -414,6 +414,9 @@
             if (!reset){ 
                 var finalAmt = (100 * Math.pow((1 + (arr/100)), 10)).toFixed(2);
             }
+            else{
+                var finalAmt = '100.00';
+            }
             document.getElementById(id).innerText = '$' + finalAmt; 
         }
 
