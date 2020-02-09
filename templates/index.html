@@ -348,7 +348,7 @@
 
             console.log(tickNames);
             let dr = getJsonFromApi('user-api', tickNames)
-            setText('annualReturn', 'risk', dr['arr'], dr['risk']);
+            setText('annualReturn', 'risk', dr[0], dr[1]);
         }
 
         function calculateBr(){
@@ -369,7 +369,7 @@
 
             console.log(tickNames);
             let dr = getJsonFromApi('blk-api', tickNames)
-            setText('annualReturnBR', 'riskBR', dr['arr'], dr['risk']);
+            setText('annualReturnBR', 'riskBR', dr[0], dr[1]);
         }
 
         function getJsonFromApi(apiUrl, tickNames){
@@ -378,7 +378,7 @@
                 let data = JSON.parse(result)
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
-                return {'arr': arr, 'risk': risk}
+                return [arr, risk];
             });
         }
 
