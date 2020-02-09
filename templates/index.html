@@ -234,8 +234,8 @@
                     <div class="card text-white bg-dark mb-3" style="width: auto">
                         <div class="card-header text-center"><b>Returns from Portfolio</b></div>
                         <div class="card-body">
-                          <p id="portfolioInterestWithout" class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
-                          <p id="portfolioInterestWith" class="card-text">Savings with investing: $100 after 10 years:</p>
+                          <p class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
+                          <p class="card-text">Savings with investing: $100 after 10 years: <b id="portfolioInterestWith"></b></p>
                         </div>
                     </div>
                 </div>
@@ -243,8 +243,8 @@
                     <div class="card border-dark mb-3" style="width: auto;">
                         <div class="card-header text-center"><b>Returns With BlackRock</b></div>
                         <div class="card-body text-dark">
-                          <p id="blackrockInterestWithout" class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
-                          <p id="blackrockInterestWith" class="card-text">Savings with investing: $100 after 10 years:</p>
+                          <p class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
+                          <p class="card-text">Savings with investing: $100 after 10 years: <b id="blackrockInterestWith"></b></p>
                         </div>
                     </div>
                 </div>
@@ -409,9 +409,8 @@
         }
 
         function setInterst(id, arr){
-            let finalAmt = (100 * Math.pow((1 + (arr / 10)), 10)).toFixed(2);
-            let finalAmtStr = (finalAmt + '').bold()
-            document.getElementById(id).innerText = 'Savings with investing: $100 after 10 years: $' + finalAmtStr; 
+            let finalAmt = (100 * Math.pow((1 + (arr)), 10)).toFixed(2);
+            document.getElementById(id).innerText = '$' + finalAmtStr; 
         }
 
         function setText(idAnnual, idRisk, arrAsStr, riskAsStr) {
