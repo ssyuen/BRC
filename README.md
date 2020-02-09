@@ -1,7 +1,7 @@
 <p align="center">
 
 <a>
-<img src="https://i.imgur.com/eqFukn9.png">
+<img src="https://i.imgur.com/kONJGrr.png">
 </a>
 
 <a href="https://www.python.org/" target="_blank">
