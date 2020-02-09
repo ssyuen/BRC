@@ -1,27 +1,25 @@
 <p align="center">
 
-<a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+<a href="https://www.python.org/" target="_blank">
     <img src="https://forthebadge.com/images/badges/made-with-python.svg">
   </a>
-  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+  <a href="https://www.javascript.com/" target="_blank">
     <img src="https://forthebadge.com/images/badges/uses-js.svg">
   </a>
-  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+  <a href="https://github.com/ssyuen/BRC/graphs/contributors" target="_blank">
     <img src="https://forthebadge.com/images/badges/built-with-love.svg">
   </a>
-  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+  <a href="https://www.w3schools.com/html/html5_intro.asp" target="_blank">
     <img src="https://forthebadge.com/images/badges/validated-html5.svg">
   </a>
 
 </p>
 
-
-
 # BRC
 
+Jasmine is made to help you get into investing while making sure you avoid the noise. Don't be baited by the news about "popular" stocks/companies or potentially huge gains from betting on a company. Instead, Jasmine has two API endpoints which access BlackRock's Aladdin, which in turn, returns financial information that Jasmine uses to show users the advantages of diversification.
+
 > Make sure that pipenv is installed on your system (look here <https://docs.python-guide.org/dev/virtualenvs/#virtualenvironments-ref):>
-
-
 
 ## Introduction
 
