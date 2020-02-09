@@ -1,15 +1,38 @@
+#some{
+    background: url('../static/assets/img/bg-pattern.png'), 
+    linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);
+}
+
+#portfolioSideHeader{
+    color: rgb(0, 0, 0); font-family: 'Archivo Black', sans-serif;
+}
+
 #blackrockimage{
     filter: invert(100%);
 }
 
-#portfolioSide{
+#imageDiv{
+    background-color: rgba(255, 255, 255, 0); filter: brightness(46%);
+}
+
+#portfolioSide button{
+    background-color: #222222;
+}
+
+#blackrockSide button{
+    background-color: white;
     color: black;
 }
 
-#portfolioSide button.active{
-    background-color: darkgoldenrod;
+.return-risk-cards{
+    font-family: 'Anton', sans-serif; font-size: 75px;;
 }
 
-#blackrockSide{
-    color: white;
+#portfolioSide button.flag{
+    background-color: #fdc53a;
+}
+
+
+#blackrockSide button.flag2{
+    background-color: #fdc53a;
 }
