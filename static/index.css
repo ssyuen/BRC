@@ -36,3 +36,7 @@
 #blackrockSide button.flag2{
     background-color: #fdc53a;
 }
+
+html {
+    scroll-behavior: smooth;
+}
