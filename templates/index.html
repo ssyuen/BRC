@@ -27,7 +27,7 @@
             <!--Navbar-->
             <nav class="navbar navbar-light navbar-expand-lg" id="mainNav">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"
-                    style="color: #000000; font-family: 'Archivo Black', sans-serif;"><img src="../static/JasmineLogo.png" style="width: 200px;"></a>
+                    style="color: #000000; font-family: 'Archivo Black', sans-serif;"><img src="../static/JasmineLogo.png" alt="JasmineLogo" style="width: 200px;"></a>
                 <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
                         class="fa fa-bars"></i>
@@ -232,7 +232,11 @@
             <div class="row pb-3">
                 <div class="col">
                     <div class="card text-white bg-dark mb-3" style="width: auto">
-                        <div class="card-header text-center"><b>Returns from Portfolio</b></div>
+                        <div class="card-header text-center">
+                            <b>Returns from Portfolio</b>
+                            <br>
+                            <a href="#whatsCompound" style="color: #fdc53a">What's Compound Interest?</a>
+                        </div>
                         <div class="card-body">
                           <p class="card-text">Savings without investing: $100 after 10 years: <b>$100.00</b></p>
                           <p class="card-text">Savings with investing: $100 after 10 years: <b id="portfolioInterestWith">$100</b></p>
@@ -241,7 +245,11 @@
                 </div>
                 <div class="col">
                     <div class="card border-dark mb-3" style="width: auto;">
-                        <div class="card-header text-center"><b>Returns with BlackRock</b></div>
+                        <div class="card-header text-center">
+                            <b>Returns with BlackRock</b>
+                            <br>
+                            <a href="#whatsCompound" style="color: #fdc53a">What's Compound Interest?</a>
+                        </div>
                         <div class="card-body text-dark">
                           <p class="card-text">Savings without investing: $100 after 10 years: <b>$100.00</b></p>
                           <p class="card-text">Savings with investing: $100 after 10 years: <b id="blackrockInterestWith">$100</b></p>
@@ -281,6 +289,13 @@
                     <p><b>What does average annualized return of the portfolio mean?</b></p>
                     <p class="lead">
                         Our average annualized return represents the expected growth of your investment when you invest your money in the portfolio. If you put in $100 in a portfolio with an average annualized return of 10%, your investment is expected to grow to $110 ($100 + 100 * 10%) by the end of the year. 
+                    </p>
+
+                    <hr style="width: 50%">
+
+                    <p id="whatsCompound"><b>What is compound interest?</b></p>
+                    <p class="lead">
+                        Compound interest makes your money grow faster because interest is calculated on the accumulated interest over time as well as on your original principal. Compounding can create a snowball effect, as the original investments plus the income earned from those investments grow together. 
                     </p>
 
                     <hr style="width: 50%">
