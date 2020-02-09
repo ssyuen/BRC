@@ -373,7 +373,7 @@
         }
 
         function getJsonFromApi(apiUrl, tickNames){
-            $.getJSON("/" + apiurl + "/?ticks=" + tickNames, function processData(result) {
+            $.getJSON("/" + apiUrl + "/?ticks=" + tickNames, function processData(result) {
                 console.log("entered JSON");
                 let data = JSON.parse(result)
                 let arr = Math.round(data['arr'] * 100);
