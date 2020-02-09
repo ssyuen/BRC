@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Jasmine</title>
     <meta name="description" content="UGA Hacks Portfolio Diversity Analyzer">
-    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
@@ -14,253 +15,319 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker+Grotesque">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/index.css">
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  -->
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
 </head>
 
-<body class="text-left" id="page-top">
-    <div id="mc" style="background: url('../static/assets/img/bg-pattern.png'), linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%); max-width: 1650px;max-height: 1000px;margin: 3px; padding: 3px;">
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top"
-                    style="color: #000000;font-family: 'Archivo Black', sans-serif;">J A S M  I N E</a><button
-                    data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right"
+<body>
+    <div id="some">
+        <div id="navContainer">
+            <!--Navbar-->
+            <nav class="navbar navbar-light navbar-expand-lg pr-5 pl-5 pb-5" id="mainNav">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"
+                    style="color: #000000; font-family: 'Archivo Black', sans-serif;">J A S M I N E</a>
+                <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
-                        class="fa fa-bars"></i></button>
+                        class="fa fa-bars"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger"
-                                href="#features">Features</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger"
-                                href="#contact">About</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#features"
+                                style="color: white;">Features</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact"
+                                style="color: white;">About</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-        <div class="row" style="max-width: 1280px;max-height: 750px;margin: 3px; padding: 3px;">
-            <div class="col" id="portfolioSide">
-                <div id="companyNamesGroup">
-                    <h2 class="text-center" style="color: rgb(0, 0, 0);font-family: 'Archivo Black', sans-serif;">
-                        <strong>Build Your Portfolio</strong>
-                    </h2>
-                    <div class="text-center pb-2">
-                        <div>
-                            <b>Choose some common stocks</b>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('NFLX');" itemprop="NFLX"
-                                    id="NFLX">Netflix</button>
-                            </div>
-                            <!-- <div class="btn-group-toggle p-3 w-auto " data-toggle="buttons">
-                                <label class="btn btn-primary w-100">
-                                    <input type="checkbox" checked autocomplete="off">Netflix
-                                </label>
-                            </div> -->
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('AAPL');" itemprop="AAPL"
-                                    id="AAPL">Apple</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('MSFT');" itemprop="MSFT"
-                                    id="MSFT">Microsoft</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('GE');" itemprop="GE" id="GE">GE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('DAL');" itemprop="DAL"
-                                    id="DAL">Delta</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('PINS');" itemprop="PINS"
-                                    id="PINS">Pintrest</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('GPS');" itemprop="GPS"
-                                    id="GPS">GAP</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('SBUX');" itemprop="SBUX"
-                                    id="SBUX">Starbucks</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('XOM');" itemprop="XOM"
-                                    id="XOM">Exxon</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="switchClass('PG');" itemprop="PG" id="PG">Proctor &
-                                    Gamble</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="col-auto d-xl-flex justify-content-xl-center">
-                <div
-                    class="d-xl-flex justify-content-center align-items-center align-content-center justify-content-xl-center">
-                    <p class="text-center d-xl-flex justify-content-center align-content-center justify-content-xl-center"
-                        style="font-family: 'Archivo Black', sans-serif;color: rgb(255,255,255);"><span class="pr-1"
-                            style="color: #000000">V</span style="color: #FFFFFF">S</p>
-                </div>
-            </div>
-
-            <!-- This is all the second column of the first row-->
-            <div class="col" id="blackrockSide">
-                <div>
-                    <div class="text-center" style="background-color: rgba(255,255,255,0);filter: brightness(46%);">
-                        <img src="../static/assets/img/BlackRock.png" id="blackrockimage" width="200"
-                            style="padding-bottom: 10px;">
-                    </div>
-
-                    <div class="text-center text-white">
-                        <div><b>Choose an Exchange-traded Fund (ETF)</b></div>
-                    </div>
-                    <div class="text-center">
-                        <div><a href="">What's an ETF?</a></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" onclick="" itemprop="">iShares S&P 500 Index Fund</button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
-                                    aria-pressed="false" itemprop="">iShares Russell 200 Fund</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col">
-                            <div class="p-3 w-auto">
-                                <button type="button" class="btn btn-primary w-10 companyNames" data-toggle="button"
-                                    aria-pressed="false" itemprop="">iShares Municipal Bond Index Fund</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </nav>
+            <!--End Nav-->
         </div>
-        <div class="row" style="padding-top: 5px; ">
-            <div class="col">
-                <div class="card text-white bg-dark mb-3 mt-3" style="width: auto;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col text-center">
-                                <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="annualReturn">
-                                    0%
-                                </p>
-                                <p class="lead">Annualized Return</p>
-                            </div>
-                            <div class="col text-center">
-                                <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="risk">
-                                    0%
-                                </p>
-                                <p class="lead">Risk</p>
-                            </div>
-                        </div>
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-dark bg-white mb-3 mt-3" style="width: auto;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col text-center">
-                                <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="annualReturn">
-                                    0%
-                                </p>
-                                <p class="lead">Annualized Return</p>
-                            </div>
-                            <div class="col text-center">
-                                <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="risk">
-                                    0%
-                                </p>
-                                <p class="lead">Risk</p>
-                            </div>
-                        </div>
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="row">
-            <div class="col">
-
-            </div>
-        </div> -->
-    </div>
-    <section id="features" class="features text-center bg-primary" style="background-color: rgb(20,50,82);">
-        <div class="container">
+        <div class="content-body pl-3 pr-3">
             <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <h2 class="section-heading">Frequently Asked Questions</h2>
-                    <p>Our app is available on any mobile device! Download now to get started!</p>
+                <div class="col" id="portfolioSide">
+                    <div id="companyNamesGroup">
+                        <h2 id="portfolioSideHeader" class="text-center">
+                            <strong>Build Your Portfolio</strong>
+                        </h2>
+                        <div class="text-center pb-2">
+                            <div>
+                                <b>Choose some common stocks</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('NFLX');"
+                                       id="NFLX">Netflix</button>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('AAPL');"
+                                        id="AAPL">Apple</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('MSFT');"
+                                        id="MSFT">Microsoft</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('GE');"
+                                        id="GE">GE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('DAL');"
+                                       id="DAL">Delta</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('PINS');"
+                                        id="PINS">Pinterest</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('GPS');"
+                                        id="GPS">GAP</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('SBUX');"
+                                        id="SBUX">Starbucks</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('XOM');"
+                                        id="XOM">Exxon</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass('PG');"
+                                        id="PG">Proctor & Gamble</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-auto d-xl-flex justify-content-xl-center">
+                    <div class="d-xl-flex justify-content-center align-items-center align-content-center justify-content-xl-center">
+                        <p style="font-family: 'Archivo Black', sans-serif;color: rgb(255,255,255);">
+                            <span id="v-splitter" class="pr-1" style="color: #000000; text-transform: uppercase;">V</span>
+                            <span id="s-splitter" style="color: #FFFFFF; text-transform: uppercase;">S</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- This is all the second column of the first row-->
+                <div class="col" id="blackrockSide">
+                    <div>
+                        <div id="imageDiv" class="text-center">
+                            <img src="../static/assets/img/BlackRock.png" alt="Blackrock Logo" id="blackrockimage" width="300" style="padding-bottom: 10px;">
+                        </div>
+                        <div class="text-center text-white">
+                            <div><b>Choose an Exchange-traded Fund (ETF)</b></div>
+                        </div>
+                        <div class="text-center">
+                            <div><a href="" style="color: #fdc53a">What's an ETF?</a></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass2('IVV');" id="IVV">iShares S&P 500
+                                        Index Fund</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames"
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass2('IWM');" id="IWM">iShares Russell 200
+                                        Fund</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                        aria-pressed="false" onclick="switchClass2('BIDAX');" id="BIDAX">iShares Municipal Bond Index Fund</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 w-auto">
+                                    <button type="button" class="btn btn-primary w-100 companyNames" data-toggle="button"
+                                        aria-pressed="false" onclick="switchClass2('IUSG');" id="IUSG">iShares S&P Growth Fund</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--SECOND ROW-->
+            <div class="row pb-3">
+                <div class="col">
+                    <div class="card text-white bg-dark mb-3 mt-3" style="width: auto;">
+                        <div class="card-body">
+                            <div class="row return-risk-cards">
+                                <div class="col text-center">
+                                    <p id="annualReturn">0%</p>
+                                    <p class="lead">Annualized Return</p>
+                                </div>
+                                <div class="col text-center">
+                                    <p id="risk">0%</p>
+                                    <p class="lead">Risk</p>
+                                </div>
+                            </div>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-dark bg-white mb-3 mt-3" style="width: auto;">
+                        <div class="card-body">
+                            <div class="row return-risk-cards">
+                                <div class="col text-center">
+                                    <p id="annualReturnBR">0%</p>
+                                    <p class="lead">Annualized Return</p>
+                                </div>
+                                <div class="col text-center">
+                                    <p id="riskBR">0%</p>
+                                    <p class="lead">Risk</p>
+                                </div>
+                            </div>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="bg-secondary contact bg-primary" id="contact" style="background-color: rgb(42,88,129);">
-        <div class="container">
-            <h2><span>Made with&nbsp;</span><i class="fa fa-heart"></i><span>&nbsp;at UGAHacks 5&nbsp;</span></h2>
+    </div>
+
+    <div class="pt-xl-5" style="background-color: #fdc53a; color: black; font-family: Catamaran, Helvetica, Arial, 'sans-serif';">
+        <div class="row pb-5">
+            <div class="col text-center" style="height: 50px;">
+                <h2 class="section-heading" style="font-size: 50px; font-weight: 200;">Frequently Asked Questions</h2>
+            </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col text-center">
+                <div class="container">
+                    <p><b>Our Purpose!</b></p>
+                    <p class="lead">
+                        To educate beginner investors in the importance and less-frightening aspects of
+                        investing and to prepare for a better financial future.
+                    </p>
+                    <hr style="width: 50%">
+                    
+                    <p><b>What is an Exchanged-Traded Fund?</b></p>
+                    <p class="lead">
+                        An Exchange-Traded Fund (ETF) is a type of security that involves a collection
+                        of securities—such as stocks—that often tracks an underlying index, although
+                        they can invest in any number of industry sectors or use various strategies.
+                    </p>
+                    <hr style="width: 50%">
+
+                    <p><b>What does average annualized return of the portfolio mean?</b></p>
+                    <p class="lead">
+                        Our average annualized return represents the expected growth of your investment when you invest your money in the portfolio. If you put in $100 in a portfolio with an average annualized return of 10%, your investment is expected to grow to $110 ($100 + 100 * 10%) by the end of the year. 
+                    </p>
+                    <hr style="width: 50%">
+
+                    <p><b>What is the risk-return tradeoff?</b></p>
+                    <p class="lead">
+                        Goal: The goal is to maximize your annual return and minimize your risk. By maximizing your return and minimizing your risk, you are aiming for the highest amount of money you can earn with the lowest chance of losing it….. (Needs rephrasing)
+                    </p>
+                    <hr style="width: 50%">
+
+                    <p><b>Why Invest?</b></p>
+                    <p class="lead">
+                        A common question for people is typically, “Why should we invest?” Investing is to provide a life that we want without financial burdens, to prepare us for retirement, and to be ready for unexpected emergencies. From survey conducted by Blackrock, it shows that 51% participants responded that they are not making enough money to live the life they want; 43% responded with not having money to take care of unexpected emergencies, and 38% participants are not on track for retirement. Another research by Yahoo Finance shows that 64% of Americans are unprepared for retirement. Developing better financial habits prepare us for a sustainable future.
+                    </p>
+                    <hr style="width: 50%">
+
+                    <p><b>Why invest in a portfolio instead of individualized stocks?</b></p>
+                    <p class="lead">
+                        As novice investors, the easiest way to invest is to start with a portfolio that represents a diversified range of assets (stocks, government bonds, Treasury Bills, etc.). By investing in a portfolio, the overall risk is minimized because we are not putting all our investment into one company, but instead many companies. If some companies perform well, and some perform poorly, the chance of losing all our investment is mitigated.
+                    </p>
+
+                    <hr style="width: 50%">
+
+                    <p><b>Are there downsides to investing in portfolios?</b></p>
+                    <p class="lead">
+                        In most instances, financial asset management companies charge a fee for their services (either by commission or a percentage of your earnings from investments). However, in the long run, such as retirement, the benefits outweigh the cost because asset management companies have better understanding of the market and know where to better invest your money to make sure you have the best earnings based on your risk tolerance. Down below are some sources where you can consider learning more about different financial asset management tools. 
+                    </p>
+
+                    <hr style="width: 50%">
+
+                    <p><b>What are asset classes and how do they work?</b></p>
+                    <p class="lead">
+                        When you invest in a portfolio, it consists of many different asset classes, which consists of either stock, bonds, Treasury Bills. Etc.  With each asset, you are putting in your money, in hopes of that money generates more money for you. Refer to the link for a more in-depth description of each type of asset classes, <a href="https://www.investopedia.com/terms/a/assetclasses.asp" target="_blank">Investopedia - Asset Classes</a> 
+                    </p>
+
+                    <hr style="width: 50%">
+
+                    <p><b>What if I do not have much money to start investing?</b></p>
+                    <p class="lead">
+                        It is perfectly okay even if you do not have much money to start investing. As long as you can put a little amount in each month, the money you put in accumulates interest, and over time, your money will grow more. 
+                    </p>
+
+                    <hr style="width: 50%">
+
+                    <p><b>Helpful Links</b></p>
+                    <p class="lead">Blackrock: <a href="https://www.blackrock.com/">Blackrock Website</a></p>
+                    <p class="lead">Acorns - A money saving app: <a href="https://www.acorns.com/">Acorns Website</a></p>
+                    <p class="lead">Investopedia - Learn!: <a href="https://www.investopedia.com/">Investopedia Website</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-xl-5 pb-xl-5 contact" id="contact"
+        style="background-color: #FDCB4C; font-family: Catamaran, Helvetica, Arial, 'sans-serif';">
+        <div class="text-center">
+            <h2 style="font-size: 50px; font-weight: 200;">
+                <span>Made with</span>
+                <i class="fa fa-heart" style="color: #DD4B39"></i>
+                <span>at UGAHacks 5</span>
+            </h2>
+        </div>
+    </div>
+
     <footer>
-        <div class="container">
-            <p>©&nbsp;Manu Puduvalli, Samuel Yuen, William Vega, Yijian Ma-Ma 2020. All Rights Reserved.</p>
+        <div class="text-center pt-5 pb-5" style="background-color: #222222; color: white;">
+            <p style="font-family: Muli, Helvetica, Arial, 'sans-serif'; font-size: 12px;">©&nbsp;Manu Puduvalli, Samuel Yuen, William Vega, Yijian Ma-Ma 2020.</p>
         </div>
     </footer>
-    <script src="../static/assets/js/jquery.min.js"></script>
-    <script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="../static/assets/js/new-age.js"></script>
 
     <script>
         function calculate() {
@@ -270,34 +337,54 @@
             var weight = (100 / all.length).toFixed(4);
 
             if (all.length == 0) {
-                setText('0', '0');
+                setText('annualReturn', 'risk', '0', '0');
                 return;
             }
 
             let tickNames = "";
             for (let i = 0; i < all.length; i++) {
-                tickNames += all[i].getAttribute("itemprop") + "~" + weight + "|";
+                tickNames += all[i].getAttribute("id") + "~" + weight + "|";
             }
 
             console.log(tickNames);
-
-            $.getJSON("/user-api/?ticks=" + tickNames, function processData(result) {
-                console.log("entered JSON");
-                // alert(result);
-                // alert(typeof result)
-                data = JSON.parse(result)
-                let arr = Math.round(data['arr'] * 100);
-                let risk = Math.round(data['risk'].toFixed(2));
-                // alert(arr);
-                // alert(result.length);
-                setText(arr, risk);
-            });
-
+            let dr = getJsonFromApi('user-api', tickNames)
+            setText('annualReturn', 'risk', dr['arr'], dr['risk']);
         }
 
-        function setText(arrAsStr, riskAsStr) {
-            document.getElementById('annualReturn').innerText = arrAsStr + '%';
-            document.getElementById('risk').innerText = riskAsStr + '%';
+        function calculateBr(){
+            var all = document.getElementsByClassName('companyNames flag2');
+            console.log(all);
+
+            var weight = (100 / all.length).toFixed(4);
+
+            if (all.length == 0) {
+                setText('annualReturnBR', 'riskBR', '0', '0');
+                return;
+            }
+
+            let tickNames = "";
+            for (let i = 0; i < all.length; i++) {
+                tickNames += all[i].getAttribute("id") + "~" + weight + "|";
+            }
+
+            console.log(tickNames);
+            let dr = getJsonFromApi('blk-api', tickNames)
+            setText('annualReturnBR', 'riskBR', dr['arr'], dr['risk']);
+        }
+
+        function getJsonFromApi(apiUrl, tickNames){
+            $.getJSON("/" + apiurl + "/?ticks=" + tickNames, function processData(result) {
+                console.log("entered JSON");
+                let data = JSON.parse(result)
+                let arr = Math.round(data['arr'] * 100);
+                let risk = Math.round(data['risk'].toFixed(2));
+                return {'arr': arr, 'risk': risk}
+            });
+        }
+
+        function setText(idAnnual, idRisk, arrAsStr, riskAsStr) {
+            document.getElementById(idAnnual).innerText = arrAsStr + '%';
+            document.getElementById(idRisk).innerText = riskAsStr + '%';
         }
 
         function switchClass(current) {
@@ -316,7 +403,23 @@
             }
             calculate();
         }
+
+        function switchClass2(current) {
+            console.log(current);
+            let x = document.getElementById(current);
+            if (x.classList.contains("flag2")) {
+                console.log(x);
+                console.log("not active");
+                x.classList.remove('flag2');
+            }
+            else {
+                console.log(x);
+                console.log("active");
+                x.classList.add('flag2');
+
+            }
+            calculateBr();
+        }
     </script>
 </body>
-
-</htm lang="en-US">
+</html>
