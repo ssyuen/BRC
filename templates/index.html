@@ -193,7 +193,7 @@
                 </div>
             </div>
             <!--SECOND ROW-->
-            <div class="row pb-3">
+            <div class="row">
                 <div class="col">
                     <div class="card text-white bg-dark mb-3 mt-3" style="width: auto;">
                         <div class="card-body">
@@ -225,6 +225,26 @@
                                 </div>
                             </div>
                             <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col">
+                    <div class="card text-white bg-dark mb-3" style="width: auto">
+                        <div class="card-header text-center"><b>Returns from Portfolio</b></div>
+                        <div class="card-body">
+                          <p id="portfolioInterestWithout" class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
+                          <p id="portfolioInterestWith" class="card-text">Savings with investing: $100 after 10 years:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-dark mb-3" style="width: auto;">
+                        <div class="card-header text-center"><b>Returns With BlackRock</b></div>
+                        <div class="card-body text-dark">
+                          <p id="blackrockInterestWithout" class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
+                          <p id="blackrockInterestWith" class="card-text">Savings with investing: $100 after 10 years:</p>
                         </div>
                     </div>
                 </div>
@@ -357,6 +377,7 @@
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
                 setText('annualReturn', 'risk', arr, risk);
+                setInterst('annualReturn', arr);
             });
         }
 
@@ -383,7 +404,13 @@
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
                 setText('annualReturnBR', 'riskBR', arr, risk);
-            });
+                setInterst('blackrockInterestWith', arr)
+            });     
+        }
+
+        function setInterst(id, arr){
+            let finalAmt = 100 * Math.pow((1 + (arr / 10)), 10);
+            document.getElementById(id).innerText = 'Savings with investing: $100 after 10 years: <b>' + finalAmt + '</b>'; 
         }
 
         function setText(idAnnual, idRisk, arrAsStr, riskAsStr) {
