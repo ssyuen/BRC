@@ -347,7 +347,7 @@
             }
 
             console.log(tickNames);
-            let dr = getJsonFromApi('user-api', tickNames)
+            let dr = getJsonFromApi('/user-api/', tickNames)
             setText('annualReturn', 'risk', dr[0], dr[1]);
         }
 
@@ -368,12 +368,12 @@
             }
 
             console.log(tickNames);
-            let dr = getJsonFromApi('blk-api', tickNames)
+            let dr = getJsonFromApi('/blk-api/', tickNames)
             setText('annualReturnBR', 'riskBR', dr[0], dr[1]);
         }
 
         function getJsonFromApi(apiUrl, tickNames){
-            $.getJSON("/" + apiUrl + "/?ticks=" + tickNames, function processData(result) {
+            $.getJSON(apiUrl + "?ticks=" + tickNames, function processData(result) {
                 console.log("entered JSON");
                 let data = JSON.parse(result)
                 let arr = Math.round(data['arr'] * 100);
