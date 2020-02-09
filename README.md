@@ -1,6 +1,8 @@
 <p align="center">
 
+<a>
 <img src="https://i.imgur.com/eqFukn9.png">
+</a>
 
 <a href="https://www.python.org/" target="_blank">
     <img src="https://forthebadge.com/images/badges/made-with-python.svg">
