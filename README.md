@@ -4,13 +4,18 @@
 
 <p align="center">
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-
-[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
-
-[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+    <img src="https://forthebadge.com/images/badges/made-with-python.svg">
+  </a>
+  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+    <img src="https://forthebadge.com/images/badges/uses-js.svg">
+  </a>
+  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg">
+  </a>
+  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+    <img src="https://forthebadge.com/images/badges/validated-html5.svg">
+  </a>
 
 </p>
 
