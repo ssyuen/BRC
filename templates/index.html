@@ -241,7 +241,7 @@
                 </div>
                 <div class="col">
                     <div class="card border-dark mb-3" style="width: auto;">
-                        <div class="card-header text-center"><b>Returns With BlackRock</b></div>
+                        <div class="card-header text-center"><b>Returns with BlackRock</b></div>
                         <div class="card-body text-dark">
                           <p class="card-text">Savings without investing: $100 after 10 years: <b>$100</b></p>
                           <p class="card-text">Savings with investing: $100 after 10 years: <b id="blackrockInterestWith"></b></p>
@@ -361,6 +361,7 @@
 
             if (all.length == 0) {
                 setText('annualReturn', 'risk', '0', '0');
+                setInterst('portfolioInterestWith', '0');
                 return;
             }
 
@@ -389,6 +390,7 @@
 
             if (all.length == 0) {
                 setText('annualReturnBR', 'riskBR', '0', '0');
+                setInterst('blackrockInterestWith', '0');
                 return;
             }
 
