@@ -227,13 +227,13 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col text-center">
-                                    <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="annualReturn">
+                                    <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="annualReturnBR">
                                         0%
                                     </p>
                                     <p class="lead">Annualized Return</p>
                                 </div>
                                 <div class="col text-center">
-                                    <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="risk">
+                                    <p style="font-family: 'Anton', sans-serif; font-size: 75px;" id="riskBR">
                                         0%
                                     </p>
                                     <p class="lead">Risk</p>
@@ -295,7 +295,7 @@
             var weight = (100 / all.length).toFixed(4);
 
             if (all.length == 0) {
-                setText('0', '0');
+                setText('annualReturn', 'risk', '0', '0');
                 return;
             }
 
@@ -327,7 +327,7 @@
             var weight = (100 / all.length).toFixed(4);
 
             if (all.length == 0) {
-                setText('0', '0');
+                setText('annualReturnBR', 'riskBR', '0', '0');
                 return;
             }
 
@@ -351,9 +351,9 @@
             });
         }
 
-        function setText(arrAsStr, riskAsStr) {
-            document.getElementById('annualReturn').innerText = arrAsStr + '%';
-            document.getElementById('risk').innerText = riskAsStr + '%';
+        function setText(idAnnual, idRisk, arrAsStr, riskAsStr) {
+            document.getElementById(idAnnual).innerText = arrAsStr + '%';
+            document.getElementById(idRisk).innerText = riskAsStr + '%';
         }
 
         function switchClass(current) {
