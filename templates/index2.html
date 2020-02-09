@@ -174,14 +174,14 @@
                             <div class="col">
                                 <div class="p-3 w-auto">
                                     <button type="button" class="btn btn-primary w-100 companyNames"
-                                        data-toggle="button" aria-pressed="false" onclick="" itemprop="">iShares S&P 500
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass2('IVV');" id="IVV" itemprop="IVV">iShares S&P 500
                                         Index Fund</button>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="p-3 w-auto">
                                     <button type="button" class="btn btn-primary w-100 companyNames"
-                                        data-toggle="button" aria-pressed="false" itemprop="">iShares Russell 200
+                                        data-toggle="button" aria-pressed="false" onclick="switchClass2('IWM');" id="IWM" itemprop="IVV">iShares Russell 200
                                         Fund</button>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                             <div class="col">
                                 <div class="p-3 w-auto">
                                     <button type="button" class="btn btn-primary w-10 companyNames" data-toggle="button"
-                                        aria-pressed="false" itemprop="">iShares Municipal Bond Index Fund</button>
+                                        aria-pressed="false" onclick="switchClass2('BIDAX');" id="BIDAX" itemprop="IVV">iShares Municipal Bond Index Fund</button>
                                 </div>
                             </div>
                         </div>
@@ -320,6 +320,37 @@
 
         }
 
+        function calculateBr(){
+            var all = document.getElementsByClassName('companyNames flag2');
+            console.log(all);
+
+            var weight = (100 / all.length).toFixed(4);
+
+            if (all.length == 0) {
+                setText('0', '0');
+                return;
+            }
+
+            let tickNames = "";
+            for (let i = 0; i < all.length; i++) {
+                tickNames += all[i].getAttribute("itemprop") + "~" + weight + "|";
+            }
+
+            console.log(tickNames);
+
+            $.getJSON("/blk-api/?ticks=" + tickNames, function processData(result) {
+                console.log("entered JSON");
+                // alert(result);
+                // alert(typeof result)
+                data = JSON.parse(result)
+                let arr = Math.round(data['arr'] * 100);
+                let risk = Math.round(data['risk'].toFixed(2));
+                // alert(arr);
+                // alert(result.length);
+                setText(arr, risk);
+            });
+        }
+
         function setText(arrAsStr, riskAsStr) {
             document.getElementById('annualReturn').innerText = arrAsStr + '%';
             document.getElementById('risk').innerText = riskAsStr + '%';
@@ -340,6 +371,23 @@
 
             }
             calculate();
+        }
+
+        function switchClass2(current) {
+            console.log(current);
+            let x = document.getElementById(current);
+            if (x.classList.contains("flag2")) {
+                console.log(x);
+                console.log("not active");
+                x.classList.remove('flag2');
+            }
+            else {
+                console.log(x);
+                console.log("active");
+                x.classList.add('flag2');
+
+            }
+            calculateBr();
         }
     </script>
 
