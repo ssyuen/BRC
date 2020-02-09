@@ -25,18 +25,18 @@
     <div id="some">
         <div id="navContainer">
             <!--Navbar-->
-            <nav class="navbar navbar-light navbar-expand-lg pr-5 pl-5 pb-5" id="mainNav">
+            <nav class="navbar navbar-light navbar-expand-lg" id="mainNav">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"
-                    style="color: #000000; font-family: 'Archivo Black', sans-serif;">J A S M I N E</a>
+                    style="color: #000000; font-family: 'Archivo Black', sans-serif;"><img src="../static/JasmineLogo.png" style="width: 200px;"></a>
                 <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
                         class="fa fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#features"
-                                style="color: white;">Features</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact"
+                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#faq"
+                                style="color: white;">FAQ</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#about"
                                 style="color: white;">About</a></li>
                     </ul>
                 </div>
@@ -156,7 +156,7 @@
                             <div><b>Choose an Exchange-traded Fund (ETF)</b></div>
                         </div>
                         <div class="text-center">
-                            <div><a href="" style="color: #fdc53a">What's an ETF?</a></div>
+                            <div><a href="#whatsAnEtf" style="color: #fdc53a">What's an ETF?</a></div>
                         </div>
 
                         <div class="row">
@@ -232,7 +232,7 @@
         </div>
     </div>
 
-    <div class="pt-xl-5" style="background-color: #fdc53a; color: black; font-family: Catamaran, Helvetica, Arial, 'sans-serif';">
+    <div id="faq" class="pt-xl-5" style="background-color: #fdc53a; color: black; font-family: Catamaran, Helvetica, Arial, 'sans-serif';">
         <div class="row pb-5">
             <div class="col text-center" style="height: 50px;">
                 <h2 class="section-heading" style="font-size: 50px; font-weight: 200;">Frequently Asked Questions</h2>
@@ -246,20 +246,23 @@
                         To educate beginner investors in the importance and less-frightening aspects of
                         investing and to prepare for a better financial future.
                     </p>
+
                     <hr style="width: 50%">
                     
-                    <p><b>What is an Exchanged-Traded Fund?</b></p>
+                    <p id="whatsAnEtf"><b>What is an Exchanged-Traded Fund?</b></p>
                     <p class="lead">
                         An Exchange-Traded Fund (ETF) is a type of security that involves a collection
                         of securities—such as stocks—that often tracks an underlying index, although
                         they can invest in any number of industry sectors or use various strategies.
                     </p>
+
                     <hr style="width: 50%">
 
                     <p><b>What does average annualized return of the portfolio mean?</b></p>
                     <p class="lead">
                         Our average annualized return represents the expected growth of your investment when you invest your money in the portfolio. If you put in $100 in a portfolio with an average annualized return of 10%, your investment is expected to grow to $110 ($100 + 100 * 10%) by the end of the year. 
                     </p>
+
                     <hr style="width: 50%">
 
                     <p><b>What is the risk-return tradeoff?</b></p>
@@ -312,7 +315,7 @@
         </div>
     </div>
 
-    <div class="pt-xl-5 pb-xl-5 contact" id="contact"
+    <div class="pt-xl-5 pb-xl-5" id="about"
         style="background-color: #FDCB4C; font-family: Catamaran, Helvetica, Arial, 'sans-serif';">
         <div class="text-center">
             <h2 style="font-size: 50px; font-weight: 200;">
@@ -400,7 +403,6 @@
                 console.log(x);
                 console.log("active");
                 x.classList.add('flag');
-
             }
             calculate();
         }
@@ -417,7 +419,6 @@
                 console.log(x);
                 console.log("active");
                 x.classList.add('flag2');
-
             }
             calculateBr();
         }
