@@ -361,7 +361,7 @@
 
             if (all.length == 0) {
                 setText('annualReturn', 'risk', '0', '0');
-                setInterst('portfolioInterestWith', '100');
+                setInterst('portfolioInterestWith', '100', true);
                 return;
             }
 
@@ -378,7 +378,7 @@
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
                 setText('annualReturn', 'risk', arr, risk);
-                setInterst('portfolioInterestWith', arr);
+                setInterest('portfolioInterestWith', arr, false);
             });
         }
 
@@ -390,7 +390,7 @@
 
             if (all.length == 0) {
                 setText('annualReturnBR', 'riskBR', '0', '0');
-                setInterst('blackrockInterestWith', '100');
+                setInterst('blackrockInterestWith', '100', true);
                 return;
             }
 
@@ -406,12 +406,14 @@
                 let arr = Math.round(data['arr'] * 100);
                 let risk = Math.round(data['risk'].toFixed(2));
                 setText('annualReturnBR', 'riskBR', arr, risk);
-                setInterst('blackrockInterestWith', arr);
+                setInterest('blackrockInterestWith', arr, false);
             });     
         }
 
-        function setInterst(id, arr){
-            let finalAmt = (100 * Math.pow((1 + (arr/100)), 10)).toFixed(2);
+        function setInterest(id, arr, reset){
+            if (!reset){ 
+                var finalAmt = (100 * Math.pow((1 + (arr/100)), 10)).toFixed(2);
+            }
             document.getElementById(id).innerText = '$' + finalAmt; 
         }
 
