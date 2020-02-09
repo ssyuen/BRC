@@ -2,7 +2,8 @@
 
 > Make sure that pipenv is installed on your system (look here <https://docs.python-guide.org/dev/virtualenvs/#virtualenvironments-ref):>
 
-<p>
+<p align="center">
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
