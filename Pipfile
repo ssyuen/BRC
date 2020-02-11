@@ -9,7 +9,6 @@ verify_ssl = true
 requests = "*"
 pandas = "*"
 jupyter = "*"
-uwsgi = "*"
 flask = "*"
 flask-cors = "*"
 
